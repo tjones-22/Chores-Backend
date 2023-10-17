@@ -70,6 +70,7 @@ app.listen(process.env.PORT, () => {
   console.log('Running');
   
   setInterval(() => {
+    console.log("timer started")
     switchArrayEveryDay(initialFamily, 24 * 60 * 1000);
     switchArrayEveryDay(initialKids, 7 * 24 * 60 * 1000);
   }, 1000);
