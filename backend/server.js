@@ -71,8 +71,8 @@ app.listen(process.env.PORT, () => {
   
   setInterval(() => {
     console.log("timer started")
-    switchArrayEveryDay(initialFamily, 1000);
-    switchArrayEveryDay(initialKids,  1000);
+    switchArrayEveryDay(initialFamily,1000);
+    switchArrayEveryDay(initialKids, 1000);
   }, 1000);
  // Execute every  1 millisecond
 });
