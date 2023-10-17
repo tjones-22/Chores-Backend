@@ -70,8 +70,8 @@ app.listen(process.env.PORT, () => {
   console.log('Running');
   
   setInterval(() => {
-    switchArrayEveryDay(initialFamily, 1000);
-    switchArrayEveryDay(initialKids, 2000);
+    switchArrayEveryDay(initialFamily, 24 * 60 * 1000);
+    switchArrayEveryDay(initialKids, 7 * 24 * 60 * 1000);
   }, 1000);
  // Execute every  1 millisecond
 });
