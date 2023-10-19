@@ -25,20 +25,18 @@ const initialKids = [
     { id: 7, name: 'Mom' }
   ];
   
-  const switchArrayEveryDay = (arr,num) => {
-    const time = num; 
-  
+  const switchArrayEveryDay = (arr, time) => {
     const arrayInterval = setInterval(() => {
       const firstElement = arr.shift();
       arr.push(firstElement);
-      //console.log(arr);
+      // console.log(arr);
     }, time);
   
     setTimeout(() => {
       clearInterval(arrayInterval);
-    }, time);
+    }, 24 * 60 * 60 * 1000); // Stop after 24 hours
   };
-
+  
 
 
 app.use(cors());
@@ -70,9 +68,9 @@ app.listen(process.env.PORT, () => {
   console.log('Running');
   
   setInterval(() => {
-    console.log("timer started")
-    switchArrayEveryDay(initialFamily, 24 * 60 *100* 1000);
-    switchArrayEveryDay(initialKids, 7 * 24 * 60 *100* 1000);
+    console.log("Timer Started");
+    switchArrayEveryDay(initialFamily, 24 * 60 * 1000);
+    switchArrayEveryDay(initialKids, 7 * 24 * 60 * 1000);
   }, 1000);
  // Execute every  1 millisecond
 });
