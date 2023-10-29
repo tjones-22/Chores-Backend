@@ -29,12 +29,12 @@ const initialKids = [
     const arrayInterval = setInterval(() => {
       const firstElement = arr.shift();
       arr.push(firstElement);
-      // console.log(arr);
+  
     }, time);
   
     setTimeout(() => {
       clearInterval(arrayInterval);
-    }, 24 * 60 * 60 * 1000); // Stop after 24 hours
+    }, num); // Stop after num time
   };
   
 
