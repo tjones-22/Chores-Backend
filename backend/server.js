@@ -40,7 +40,7 @@ const initialKids = [
 
 
 app.use(cors({
-  origin: "https://joneschores.org",
+  origin: "*",
   methods: ["GET"]
 }));
 
