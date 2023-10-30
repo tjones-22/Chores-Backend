@@ -34,7 +34,7 @@ const initialKids = [
   
     setTimeout(() => {
       clearInterval(arrayInterval);
-    }, num); // Stop after num time
+    }, time); // Stop after num time
   };
   
 
