@@ -40,7 +40,8 @@ const initialKids = [
 
 
 app.use(cors({
-  origin: "http://https://joneschores.org/"
+  origin: "https://joneschores.org/",
+  methods: ["GET"]
 }));
 
 app.use(express.json());
