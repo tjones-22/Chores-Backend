@@ -28,10 +28,7 @@ const initialKids = [
   
 
 
-app.use(cors({
-  origin: "*",
-  methods: ["GET"]
-}));
+app.use(cors());
 
 app.use(express.json());
 
