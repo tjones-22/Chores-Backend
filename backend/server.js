@@ -24,18 +24,7 @@ const initialKids = [
     { id: 6, name: 'Dad' },
     { id: 7, name: 'Mom' }
   ];
-  
-  const switchArrayEveryDay = (arr, time) => {
-    const arrayInterval = setInterval(() => {
-      const firstElement = arr.shift();
-      arr.push(firstElement);
-  
-    }, time);
-  
-    setTimeout(() => {
-      clearInterval(arrayInterval);
-    }, time); // Stop after num time
-  };
+
   
 
 
@@ -70,11 +59,6 @@ res.json({member:initialKids})
 app.listen(process.env.PORT, () => {
   console.log('Running');
   
-  setInterval(() => {
-    console.log("Timer Started");
-    switchArrayEveryDay(initialFamily, 24 * 60 * 1000);
-    switchArrayEveryDay(initialKids, 7 * 24 * 60 * 1000);
-  }, 1000);
- // Execute every  1 millisecond
+ 
 });
 
