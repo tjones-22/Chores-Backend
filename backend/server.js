@@ -26,7 +26,27 @@ const initialKids = [
   ];
 
   
-
+  function switchArrays() {
+    const currentDate = new Date();
+    const currentDayOfWeek = currentDate.getDay(); // Sunday is 0, Monday is 1, ...
+  
+    if (currentDayOfWeek === 0) {
+      // Switch initialKids array every Sunday (week starts on Sunday)
+      const lastKid = initialKids.pop();
+      initialKids.unshift(lastKid);
+    }
+  
+    // Switch initialFamily array every day
+    const lastPerson = initialFamily.pop();
+    initialFamily.unshift(lastPerson);
+  
+    console.log('Switched arrays:', initialKids, initialFamily); // Example logging
+  
+    // Call this function again after 24 hours (86400000 milliseconds)
+    setTimeout(switchArrays, 86400000);
+  }
+  
+  
 
 app.use(cors());
 
@@ -55,7 +75,7 @@ res.json({member:initialKids})
 
 app.listen(process.env.PORT, () => {
   console.log('Running');
-  
+  switchArrays();
  
 });
 
