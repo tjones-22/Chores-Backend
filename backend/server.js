@@ -1,4 +1,6 @@
-
+/**
+ * @author Tristan Jones
+ */
 const choreRoutes = require("./choreRoutes");
 require('dotenv').config();
 const express = require('express');
@@ -48,7 +50,11 @@ const initialKids = [
   
   
 
-app.use(cors());
+app.use(cors({
+  origin:"https://joneschores.org/",
+  credentials:true,
+  methods: ["GET"]
+}));
 
 app.use(express.json());
 
