@@ -45,23 +45,11 @@ app.use('/api',choreRoutes);
 
 
 app.get("/members/family", (req,res) => {
-  try {
     res.json({member:initialFamily})
-    console.log("Family array sent");
-  } catch (error) {
-    console.log(error)
-  }
-    
 });
 
 app.get("/members/kids", (req,res) => {
-  try {
-    res.json({member:initialKids})
-    console.log("Kids array sent")
-  } catch (error) {
-    console.log(error)
-  }
-
+res.json({member:initialKids})
 });
 
 
