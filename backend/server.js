@@ -7,11 +7,10 @@ const express = require('express');
 const cors = require("cors");
 const app = express();
 
-
 const initialKids = [
     { id: 1, name: 'Tristan' },
-    { id: 2, name: 'Brecka' },
-    { id: 3, name: 'Brynlee' },
+    { id: 2, name: 'Brynlee' },
+    { id: 3, name: 'Brecka' },
     { id: 4, name: 'Tyson' },
     { id: 5, name: 'Brockton' },
  
@@ -42,7 +41,6 @@ const initialKids = [
     const lastPerson = initialFamily.pop();
     initialFamily.unshift(lastPerson);
   
-    console.log('Switched arrays:', initialKids, initialFamily); // Example logging
   
     // Call this function again after 24 hours (86400000 milliseconds)
     setTimeout(switchArrays, 86400000);
